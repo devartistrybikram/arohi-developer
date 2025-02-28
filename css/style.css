@@ -1,0 +1,357 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	border: none;
+	font-family: "Roboto", sans-serif;
+	font-size: 16px !important;
+	color: #333 !important;
+	text-decoration: none !important;
+	list-style: none;
+	outline: none;
+
+	/* border: 1px saddlebrown solid !important; */
+}
+
+#mainContainer {
+	max-width: 1920px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+input,
+textarea,
+select {
+	width: 100%;
+}
+
+.offcanvas {
+	.btn-close:focus {
+		box-shadow: none !important;
+	}
+
+	img {
+		max-width: 100px;
+	}
+}
+
+header {
+	.navbar-brand img {
+		max-width: 100px;
+	}
+}
+
+#bannerArea {
+	.item {
+		background: transparent url("https://placehold.co/1920x600") no-repeat center center / cover;
+
+		.container.position-relative {
+			height: 55% !important;
+		}
+	}
+
+	.text {
+		width: 100%;
+		max-width: 420px;
+		background-color: rgba(255, 255, 255, .5);
+		padding: 25px;
+	}
+}
+
+#aboutArea {
+	img {
+		min-height: 320px;
+		border-radius: 10px;
+	}
+}
+
+#highlightArea {
+	background-color: #ddeedd;
+
+	.listGroup {
+		margin-bottom: 0 !important;
+
+		ul {
+			padding: 0 !important;
+			margin: 0 !important;
+			columns: 3;
+			gap: 16px;
+
+			li {
+				padding: 15px !important;
+				min-height: 75px !important;
+				margin-bottom: 16px;
+				padding: 10px 20px !important;
+				break-inside: avoid;
+				position: relative;
+				background-color: rgba(255, 255, 255, 1);
+				transition: all 300ms ease-in-out;
+				-webkit-transition: all 300ms ease-in-out;
+				-moz-transition: all 300ms ease-in-out;
+				-ms-transition: all 300ms ease-in-out;
+				-o-transition: all 300ms ease-in-out;
+
+				span {
+					position: relative;
+					z-index: 1 !important;
+				}
+
+				&::before {
+					content: "";
+					position: absolute;
+					inset: 0 auto auto 0;
+					width: 5px;
+					height: 100%;
+					background-color: green;
+					transition: all 300ms ease-in-out;
+					-webkit-transition: all 300ms ease-in-out;
+					-moz-transition: all 300ms ease-in-out;
+					-ms-transition: all 300ms ease-in-out;
+					-o-transition: all 300ms ease-in-out;
+				}
+
+				&:is(li:nth-child(4), li:nth-child(8), li:nth-child(12)) {
+					margin-bottom: 0;
+				}
+			}
+
+			li:hover {
+				box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.25);
+
+				span {
+					color: #fff !important;
+				}
+
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+#amenitiesArea {
+	.boxData {
+		columns: 4;
+
+		li {
+			min-height: 70px;
+			break-inside: avoid-column;
+			margin-bottom: 16px;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			padding: 16px;
+			line-height: 18px;
+			box-shadow: 0 10px 10px 0 rgba(180, 170, 150, .2);
+			fill: #48aa48 !important;
+			transition: all 200ms ease-in;
+
+			svg {
+				width: 24px;
+				color: #48aa48 !important;
+				fill: #48aa48 !important;
+				max-width: 25px;
+				fill: currentColor;
+				transition: all 200ms ease-in;
+			}
+
+			.boxCircle {
+				display: block;
+				transition: all 200ms ease-in;
+
+				&::after {
+					content: '';
+					position: absolute;
+					inset: 50% auto auto 50%;
+					transform: translate(-50%, -50%);
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					z-index: -1;
+				}
+			}
+
+			&:hover {
+				box-shadow: 0 10px 10px -3px rgba(180, 170, 150, .35);
+				gap: 20px;
+
+				.boxCircle::after {
+					background-color: #48aa48;
+				}
+
+				svg {
+					color: #fff !important;
+					fill: #fff !important;
+				}
+			}
+		}
+	}
+}
+
+#priceArea {
+	background: transparent url('https://placehold.co/1920x420') no-repeat center center / cover;
+
+	&::after {
+		content: '';
+		inset: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(230, 149, 0, 0.5);
+		z-index: 1;
+	}
+
+	.priceCard {
+		overflow: hidden;
+		transition: all 300ms ease;
+		-webkit-transition: all 300ms ease;
+		-moz-transition: all 300ms ease;
+		-ms-transition: all 300ms ease;
+		-o-transition: all 300ms ease;
+
+		small,
+		p {
+			font-size: 14px !important;
+			margin-right: 5px;
+		}
+
+		.button-hover {
+			position: absolute;
+			inset: auto 0 0 auto;
+			border: 1px solid red;
+			background-color: red;
+			width: 50px;
+			height: 50px;
+			border-top-left-radius: 75%;
+			transition: 500ms;
+			display: none;
+			-webkit-transition: 500ms;
+			-moz-transition: 500ms;
+			-ms-transition: 500ms;
+			-o-transition: 500ms;
+
+			span {
+				display: grid;
+				place-items: center;
+				width: 100%;
+				height: 100%;
+				margin: auto -5px -5px auto;
+
+				i {
+					font-size: 20px !important;
+				}
+			}
+		}
+
+		&:hover {
+			box-shadow: 0 10px 10px 0 rgba(180, 170, 150, .65);
+			transform: translateY(-5px);
+			-webkit-transform: translateY(-5px);
+			-moz-transform: translateY(-5px);
+			-ms-transform: translateY(-5px);
+			-o-transform: translateY(-5px);
+
+			.button-hover {
+				display: block;
+			}
+		}
+	}
+}
+
+#calltoactionArea {
+	background: transparent url('https://placehold.co/1920x720') no-repeat center center / cover;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(90deg, rgba(0, 212, 255, 0.65) 0%, rgba(0, 212, 255, 0) 65%);
+	}
+
+	.container {
+		z-index: 2;
+		min-height: 600px;
+
+		.textBox {
+			max-width: 650px;
+		}
+	}
+}
+
+#galleryArea {
+	img {
+		border-radius: 5px;
+	}
+}
+
+#contactArea {
+	img {
+		min-height: 420px;
+	}
+}
+
+footer {
+	.contactBox {
+		span {
+			width: 85px;
+			height: 85px;
+			place-items: center;
+
+			i {
+				font-size: 30px !important;
+				color: #fff !important;
+			}
+		}
+	}
+
+	.footerMenu {
+		a {
+			color: #fff !important;
+		}
+	}
+
+	.footerBox {
+
+		p,
+		a {
+			font-size: 14px !important;
+			margin-bottom: 0;
+		}
+	}
+
+	.copy p {
+		font-size: 14px !important;
+	}
+
+	.social {
+		a {
+			width: 45px;
+			height: 45px;
+			border: 2px solid red;
+			place-items: center;
+			display: grid;
+			border-radius: 50%;
+			transition: all 350ms ease;
+
+			i {
+				font-size: 25px;
+				color: red !important;
+			}
+
+			&:hover {
+				scale: 1.15;
+				background-color: red;
+
+				i {
+					color: #fff !important;
+				}
+			}
+		}
+	}
+}
+
+/* .container {border: 1px solid red;} */
+/* * {border: 1px solid red;} */
+/* .container { border: 1px solid red;} */
