@@ -352,6 +352,21 @@ footer {
 	}
 }
 
+.offcanvas-body {
+	li a {
+		padding: 8px 16px;
+		margin-bottom: 10px;
+		border-left: 2px solid transparent;
+		transition: 300ms ease-in;
+		&:hover,
+		&.active {
+			padding: 8px 20px;
+			border-left: 2px solid #ddd;
+			color: red !important;
+		}
+	}
+}
+
 /* .container {border: 1px solid red;} */
 /* * {border: 1px solid red;} */
 /* .container { border: 1px solid red;} */
