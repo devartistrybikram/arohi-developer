@@ -40,14 +40,19 @@
 								<img src="https://placehold.co/400x200" alt="">
 							</a>
 						</div>
-						<ul class="col-10 d-none d-lg-flex justify-content-end m-0">
-							<li class="nav-item"><a href="#section1" class="nav-link active ms-3 ps-3 border-2 border-start-0">Home</a></li>
-							<li class="nav-item"><a href="#section2" class="nav-link ms-3 ps-3 border-2 border-start">About Us</a></li>
-							<li class="nav-item"><a href="#section3" class="nav-link ms-3 ps-3 border-2 border-start">Highlights</a></li>
-							<li class="nav-item"><a href="#section4" class="nav-link ms-3 ps-3 border-2 border-start">Amenities</a></li>
-							<li class="nav-item"><a href="#section5" class="nav-link ms-3 ps-3 border-2 border-start">Price</a></li>
-							<li class="nav-item"><a href="#section6" class="nav-link ms-3 ps-3 border-2 border-start">Gallery</a></li>
-							<li class="nav-item"><a href="#section7" class="nav-link ms-3 ps-3 border-2 border-start">Contact Us</a></li>
+						<ul class="col-10 d-none d-lg-flex gap-3 justify-content-end m-0 align-items-center">
+							<li class="nav-item"><a href="#section1" class="nav-link active ps-3 border-2 border-start-0">Home</a></li>
+							<li class="nav-item"><a href="#section2" class="nav-link ps-3 border-2 border-start">About Us</a></li>
+							<li class="nav-item"><a href="#section3" class="nav-link ps-3 border-2 border-start">Highlights</a></li>
+							<li class="nav-item"><a href="#section4" class="nav-link ps-3 border-2 border-start">Amenities</a></li>
+							<li class="nav-item"><a href="#section5" class="nav-link ps-3 border-2 border-start">Price</a></li>
+							<li class="nav-item"><a href="#section6" class="nav-link ps-3 border-2 border-start">Gallery</a></li>
+							<li class="nav-item"><a href="#section7" class="nav-link ps-3 border-2 border-start">Contact Us</a></li>
+							<li class="nav-item">
+								<button type="button" class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+									Enquiry Now
+								</button>
+							</li>
 						</ul>
 						<div class="col-8 col-lg-10 d-flex justify-content-end d-lg-none">
 							<button class="" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -328,7 +333,7 @@
 							<img src="https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2022/08/Google-Maps-icon-on-map.png" alt="">
 						</div>
 						<div class="col-12 col-lg-6 mt-3 mt-lg-0" data-aos="fade-left">
-							<h1 class="fs-1 fw-bold text-primary z-2">The Section Title</h1>
+							<h1 class="fs-1 fw-bold text-primary z-2">Have a Questions?</h1>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dolores exercitationem harum, nesciunt
 								esse ratione nam, fuga accusamus quos sapiente minus aliquam architecto fugit quod quaerat?
 							</p>
@@ -385,7 +390,7 @@
 							<p class="text-white">Lorem ipsum dolor sit, amet consectetur ipsum dolor adipisicing elit. Ut voluptas sit consequuntur, impedit dolor, voluptas sit consequuntur, eos quasi quas.</p>	
 						</div>
 						<div class="col-12 col-md-12 col-lg-7 col-xl-7 text-end">
-							<p class="text-white text-center text-lg-end fs-3 fw-bold mb-3">Get in Touch</p>
+							<p class="text-white text-center text-lg-end fs-3 fw-bold mb-3">Connect with us</p>
 							<p class="fw-bold social d-flex align-items-center justify-content-center justify-content-lg-end">
 								<a href="#" class="ms-2"><i class="fa-brands fa-facebook-f"></i></a>
 								<a href="#" class="ms-2"><i class="fa-brands fa-instagram"></i></a>
@@ -418,22 +423,31 @@
 				</div>
 			</footer>
 		</main>
-		<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-			Launch demo modal
-			</button> -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
+		<div class="modal fade rounded-0" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog rounded-0">
+				<div class="modal-content rounded-0">
 					<div class="modal-body">
-						...
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
+						<div class="border border-2 border-danger p-2 p-md-3 p-lg-4 text-center">
+							<h1 class="fs-1 fw-bold text-primary z-2">Have a Questions?</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae dolores exercitationem harum, nesciunt
+								esse ratione nam, fuga accusamus quos sapiente minus aliquam architecto fugit quod quaerat?
+							</p>
+							<form action="" class="row" onsubmit="return false;">
+								<div class="col-12 mb-3"><input type="text" name="" id="" placeholder="Name" class="border border-dark p-2 lh-base">
+								</div>
+								<div class="col-12">
+									<div class="row ">
+										<div class="col-12 col-md-6 mb-3"><input type="text" name="" id="" placeholder="Name" class="border border-dark p-2 lh-base"></div>
+										<div class="col-12 col-md-6 mb-3"><input type="text" name="" id="" placeholder="Name" class="border border-dark p-2 lh-base"></div>
+									</div>
+								</div>
+								<div class="col-12 mb-2"><textarea name="" id="" placeholder="Message" rows="4" class="border border-dark p-2"></textarea>
+								</div>
+								<div class="col-12">
+									<button type="button" class="btn btn-secondary px-4 py-2">Secondary</button>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -451,6 +465,11 @@
 				<li class="nav-item"><a href="#section5" class="nav-link fw-medium w-100">Price</a></li>
 				<li class="nav-item"><a href="#section6" class="nav-link fw-medium w-100">Gallery</a></li>
 				<li class="nav-item"><a href="#section7" class="nav-link fw-medium w-100">Contact Us</a></li>
+				<li class="nav-item">
+					<button type="button" class="btn btn-primary ms-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+						Enquiry Now
+					</button>
+				</li>
 			</div>
 		</div>
 		<script src="./js/jquery.min.js"></script>
