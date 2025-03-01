@@ -40,6 +40,18 @@ header {
 	.navbar-brand img {
 		max-width: 100px;
 	}
+	li a {
+		color: #666 !important;
+		--bs-border-color: #666 !important;
+		transition: 300ms ease-in;
+		&.active {
+			color: green !important;
+			font-weight: bold;
+		}
+		&:hover:not(.active) {
+			color: red !important;
+		}
+	}
 }
 
 #bannerArea {
@@ -308,7 +320,15 @@ footer {
 
 	.footerMenu {
 		a {
-			color: #fff !important;
+			color: #ddd !important;
+			transition: 300ms ease-in;
+			&:hover:not(.active) {
+				color: red !important;
+			}
+			&.active {
+				color: #fff !important;
+				font-weight: bold !important;
+			}
 		}
 	}
 
@@ -358,7 +378,11 @@ footer {
 		margin-bottom: 10px;
 		border-left: 2px solid transparent;
 		transition: 300ms ease-in;
-		&:hover,
+		&:hover:not(.active) {
+			padding: 8px 20px;
+			border-left: 2px solid #ddd;
+			color: green !important;
+		}
 		&.active {
 			padding: 8px 20px;
 			border-left: 2px solid #ddd;
