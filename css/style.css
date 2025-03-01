@@ -119,6 +119,11 @@ select {
 	font: Bold 56px/64px MontserratBold, 'Sans-serif' !important;
 }
 
+.sub-title {
+	color: #48aa48 !important;
+	font: normal 40px/56px MontserratMedium, 'Sans-serif' !important;
+}
+
 header {
 	.navbar-brand img {
 		max-width: 100px;
@@ -205,10 +210,7 @@ header {
 				position: relative;
 				background-color: rgba(255, 255, 255, 1);
 				transition: all 300ms ease-in-out;
-				-webkit-transition: all 300ms ease-in-out;
-				-moz-transition: all 300ms ease-in-out;
-				-ms-transition: all 300ms ease-in-out;
-				-o-transition: all 300ms ease-in-out;
+
 
 				span {
 					position: relative;
@@ -224,10 +226,7 @@ header {
 					background-color: #003366;
 					/* background: linear-gradient(90deg, rgba(25, 0, 60, 1) 0%, rgba(5, 81, 133, 1) 100%); */
 					transition: all 300ms ease-in-out;
-					-webkit-transition: all 300ms ease-in-out;
-					-moz-transition: all 300ms ease-in-out;
-					-ms-transition: all 300ms ease-in-out;
-					-o-transition: all 300ms ease-in-out;
+
 				}
 
 				&:is(li:nth-child(4), li:nth-child(8), li:nth-child(12)) {
@@ -309,7 +308,8 @@ header {
 }
 
 #priceArea {
-	background: transparent url('https://placehold.co/1920x420') no-repeat center center / cover;
+	/* background: transparent url('https://placehold.co/1920x420') no-repeat center center / cover; */
+	background-color: #0c336a;
 
 	&::after {
 		content: '';
@@ -325,16 +325,6 @@ header {
 	.priceCard {
 		overflow: hidden;
 		transition: all 300ms ease;
-		-webkit-transition: all 300ms ease;
-		-moz-transition: all 300ms ease;
-		-ms-transition: all 300ms ease;
-		-o-transition: all 300ms ease;
-
-		small,
-		p {
-			font-size: 12px !important;
-			margin-right: 5px;
-		}
 
 		h2 {
 			color: #0f2962 !important;
@@ -350,10 +340,6 @@ header {
 			border-top-left-radius: 75%;
 			transition: 500ms;
 			display: none;
-			-webkit-transition: 500ms;
-			-moz-transition: 500ms;
-			-ms-transition: 500ms;
-			-o-transition: 500ms;
 
 			span {
 				display: grid;
@@ -383,13 +369,13 @@ header {
 }
 
 #calltoactionArea {
-	background: transparent url('https://placehold.co/1920x720') no-repeat center center / cover;
+	background: transparent url('../images/collectionImage.jpg') no-repeat center center / cover;
 
 	&::after {
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(90deg, rgba(0, 212, 255, 0.65) 0%, rgba(0, 212, 255, 0) 65%);
+		background: linear-gradient(90deg, rgba(0, 51, 102, .95) 0%, rgba(0, 51, 102, .5) 75%);
 	}
 
 	.container {

@@ -1,5 +1,13 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+	.title {
+		font: Bold 36px/42px MontserratBold, 'Sans-serif' !important;
+	}
+
+	.sub-title {
+		font: Bold 30px/38px MontserratBold, 'Sans-serif' !important;
+	}
+
 	#bannerArea {
 		.item {
 			height: 440px;
