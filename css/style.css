@@ -145,7 +145,7 @@ header {
 
 #amenitiesArea {
 	.boxData {
-		columns: 4;
+		columns: 3;
 
 		li {
 			min-height: 70px;
@@ -157,22 +157,15 @@ header {
 			padding: 16px;
 			line-height: 18px;
 			box-shadow: 0 10px 10px 0 rgba(180, 170, 150, .2);
-			fill: #48aa48 !important;
 			transition: all 200ms ease-in;
-
-			svg {
-				width: 24px;
-				color: #48aa48 !important;
-				fill: #48aa48 !important;
-				max-width: 25px;
-				fill: currentColor;
-				transition: all 200ms ease-in;
-			}
 
 			.boxCircle {
 				display: block;
 				transition: all 200ms ease-in;
-
+				i {
+					font-size: 16px !important;
+					color: #48aa48 !important;
+				}
 				&::after {
 					content: '';
 					position: absolute;
@@ -182,20 +175,22 @@ header {
 					height: 40px;
 					border-radius: 50%;
 					z-index: -1;
-				}
+					background-color: transparent;
+					transition: 300ms ease-in;
+}
 			}
 
 			&:hover {
-				box-shadow: 0 10px 10px -3px rgba(180, 170, 150, .35);
 				gap: 20px;
+				box-shadow: 0 10px 10px -3px rgba(180, 170, 150, .35);
 
-				.boxCircle::after {
-					background-color: #48aa48;
-				}
-
-				svg {
-					color: #fff !important;
-					fill: #fff !important;
+				.boxCircle {
+					i {
+						color: #fff !important;
+					}
+					&::after {
+						background-color: #48aa48;
+					}
 				}
 			}
 		}

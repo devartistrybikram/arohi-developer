@@ -186,12 +186,6 @@
 		}
 	}
 
-	#amenitiesArea {
-		.boxData {
-			columns: 4;
-		}
-	}
-
 	#calltoactionArea {
 		.container {
 			min-height: 650px !important;
