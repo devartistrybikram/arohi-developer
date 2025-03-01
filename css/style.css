@@ -1,3 +1,29 @@
+@font-face {
+	font-family: MontserratRegular;
+	src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: MontserratMedium;
+	src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+	font-family: MontserratBold;
+	src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+	font-family: MontserratExtraBold;
+	src: url(../fonts/Montserrat-ExtraBold.ttf);
+}
+
+@font-face {
+	font-family: MontserratBlack;
+	src: url(../fonts/Montserrat-Black.ttf);
+}
+
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -10,7 +36,7 @@
 	text-decoration: none !important;
 	list-style: none;
 	outline: none;
-
+	font: normal 17px/25px MontserratMedium, 'Sans-serif';
 	/* border: 1px saddlebrown solid !important; */
 }
 
@@ -24,8 +50,8 @@
 
 section {
 	scroll-snap-align: start;
-	scroll-padding-top: 20px;
-	scroll-margin-top: 20px;
+	scroll-padding-top: 250px;
+	scroll-margin-top: 156.5px;
 }
 
 input,
@@ -44,6 +70,55 @@ select {
 	}
 }
 
+.btn.btn-primary {
+	background: rgb(25, 0, 60) !important;
+	background: linear-gradient(45deg, rgba(25, 0, 60, 1) 0%, rgba(5, 81, 133, 1) 100%) !important;
+	border-color: transparent !important;
+	color: #fff !important;
+	position: relative;
+	overflow: hidden;
+	padding: 10px 20px !important;
+	min-width: 160px;
+
+	span {
+		position: relative;
+		z-index: 2 !important;
+		color: #fff !important;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		width: 0;
+		height: 110%;
+		background-color: transparent;
+		z-index: 1;
+		transition: all 450ms ease-in-out;
+	}
+
+	&:hover {
+		border-color: transparent !important;
+
+		&::after {
+			width: 100%;
+			background-color: #111;
+		}
+	}
+
+	&:focus {
+		background-color: red !important;
+		border-color: transparent !important;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+}
+
+.title {
+	color: #0f2962 !important;
+	font: Bold 56px/64px MontserratBold, 'Sans-serif' !important;
+}
+
 header {
 	.navbar-brand img {
 		max-width: 100px;
@@ -55,19 +130,19 @@ header {
 		transition: 300ms ease-in;
 
 		&.active {
-			color: green !important;
+			color: #0f2962 !important;
 			font-weight: bold;
 		}
 
 		&:hover:not(.active) {
-			color: red !important;
+			color: #0c336a !important;
 		}
 	}
 }
 
 #bannerArea {
 	.item {
-		background: transparent url("https://placehold.co/1920x600") no-repeat center center / cover;
+		background: transparent url("../images/sliderImg_1.jpg") no-repeat center center / cover;
 
 		.container.position-relative {
 			height: 55% !important;
@@ -78,7 +153,6 @@ header {
 		width: 100%;
 		max-width: 420px;
 		background-color: rgba(255, 255, 255, .5);
-		padding: 25px;
 	}
 }
 
@@ -87,10 +161,31 @@ header {
 		min-height: 320px;
 		border-radius: 10px;
 	}
+
+	ul {
+		margin-bottom: 0;
+		padding: 10px 0 !important;
+
+		li {
+			padding: 0 0 16px 0 !important;
+			line-height: 16px !important;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+
+			&::before {
+				content: "\f058";
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				font-size: 20px;
+				color: #48aa48 !important;
+			}
+		}
+	}
 }
 
 #highlightArea {
-	background-color: #ddeedd;
+	background: rgb(230, 230, 230, .25) url('../images/backImage.png') no-repeat top center / cover;
 
 	.listGroup {
 		margin-bottom: 0 !important;
@@ -126,7 +221,8 @@ header {
 					inset: 0 auto auto 0;
 					width: 5px;
 					height: 100%;
-					background-color: green;
+					background-color: #003366;
+					/* background: linear-gradient(90deg, rgba(25, 0, 60, 1) 0%, rgba(5, 81, 133, 1) 100%); */
 					transition: all 300ms ease-in-out;
 					-webkit-transition: all 300ms ease-in-out;
 					-moz-transition: all 300ms ease-in-out;
@@ -176,7 +272,7 @@ header {
 
 				i {
 					font-size: 16px !important;
-					color: #48aa48 !important;
+					color: #003366 !important;
 				}
 
 				&::after {
@@ -200,10 +296,11 @@ header {
 				.boxCircle {
 					i {
 						color: #fff !important;
+						font-size: 18px !important;
 					}
 
 					&::after {
-						background-color: #48aa48;
+						background-color: #003366;
 					}
 				}
 			}
@@ -220,7 +317,8 @@ header {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(230, 149, 0, 0.5);
+		background-color: #0c336a;
+		/* background-color: rgb(0, 51, 102, 1); */
 		z-index: 1;
 	}
 
@@ -234,15 +332,19 @@ header {
 
 		small,
 		p {
-			font-size: 14px !important;
+			font-size: 12px !important;
 			margin-right: 5px;
+		}
+
+		h2 {
+			color: #0f2962 !important;
 		}
 
 		.button-hover {
 			position: absolute;
 			inset: auto 0 0 auto;
-			border: 1px solid red;
-			background-color: red;
+			border: 1px solid #0c336a;
+			background-color: #0c336a;
 			width: 50px;
 			height: 50px;
 			border-top-left-radius: 75%;
@@ -267,7 +369,6 @@ header {
 		}
 
 		&:hover {
-			box-shadow: 0 10px 10px 0 rgba(180, 170, 150, .65);
 			transform: translateY(-5px);
 			-webkit-transform: translateY(-5px);
 			-moz-transform: translateY(-5px);
