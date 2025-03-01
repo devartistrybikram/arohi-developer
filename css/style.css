@@ -18,6 +18,14 @@
 	max-width: 1920px;
 	margin: 0 auto;
 	padding: 0;
+	scroll-snap-type: y mandatory;
+	scroll-padding-top: 20px;
+}
+
+section {
+	scroll-snap-align: start;
+	scroll-padding-top: 20px;
+	scroll-margin-top: 20px;
 }
 
 input,
@@ -40,14 +48,17 @@ header {
 	.navbar-brand img {
 		max-width: 100px;
 	}
+
 	li a {
 		color: #666 !important;
 		--bs-border-color: #666 !important;
 		transition: 300ms ease-in;
+
 		&.active {
 			color: green !important;
 			font-weight: bold;
 		}
+
 		&:hover:not(.active) {
 			color: red !important;
 		}
@@ -162,10 +173,12 @@ header {
 			.boxCircle {
 				display: block;
 				transition: all 200ms ease-in;
+
 				i {
 					font-size: 16px !important;
 					color: #48aa48 !important;
 				}
+
 				&::after {
 					content: '';
 					position: absolute;
@@ -177,7 +190,7 @@ header {
 					z-index: -1;
 					background-color: transparent;
 					transition: 300ms ease-in;
-}
+				}
 			}
 
 			&:hover {
@@ -188,6 +201,7 @@ header {
 					i {
 						color: #fff !important;
 					}
+
 					&::after {
 						background-color: #48aa48;
 					}
@@ -317,9 +331,11 @@ footer {
 		a {
 			color: #ddd !important;
 			transition: 300ms ease-in;
+
 			&:hover:not(.active) {
 				color: red !important;
 			}
+
 			&.active {
 				color: #fff !important;
 				font-weight: bold !important;
@@ -373,11 +389,13 @@ footer {
 		margin-bottom: 10px;
 		border-left: 2px solid transparent;
 		transition: 300ms ease-in;
+
 		&:hover:not(.active) {
 			padding: 8px 20px;
 			border-left: 2px solid #ddd;
 			color: green !important;
 		}
+
 		&.active {
 			padding: 8px 20px;
 			border-left: 2px solid #ddd;
