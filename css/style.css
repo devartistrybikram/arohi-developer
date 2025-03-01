@@ -44,8 +44,10 @@
 	max-width: 1920px;
 	margin: 0 auto;
 	padding: 0;
+	overflow-x: hidden;
 	scroll-snap-type: y mandatory;
 	scroll-padding-top: 20px;
+
 }
 
 section {
@@ -555,7 +557,7 @@ footer {
 
 /* .container {border: 1px solid red;} */
 * {
-	border: 1px solid red;
+	border: 1px solid red !important;
 }
 
 /* .container { border: 1px solid red;} */
