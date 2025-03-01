@@ -60,16 +60,6 @@ select {
 	width: 100%;
 }
 
-.offcanvas {
-	.btn-close:focus {
-		box-shadow: none !important;
-	}
-
-	img {
-		max-width: 100px;
-	}
-}
-
 .btn.btn-primary {
 	background: rgb(25, 0, 60) !important;
 	background: linear-gradient(45deg, rgba(25, 0, 60, 1) 0%, rgba(5, 81, 133, 1) 100%) !important;
@@ -148,12 +138,15 @@ header {
 		a {
 			color: #666 !important;
 			transition: 300ms ease-in;
+
 			i {
 				color: #666 !important;
 				transition: 300ms ease-in;
 			}
+
 			&:hover {
 				color: #0c336a !important;
+
 				i {
 					color: #0c336a !important;
 				}
@@ -420,23 +413,29 @@ header {
 
 footer {
 	background-color: #003366;
+
 	.contactBox {
 		.innerBox {
 			background-color: #11225a !important;
 		}
+
 		span {
 			width: 85px;
 			height: 85px;
 			place-items: center;
+
 			&.d-block {
 				background-color: #fff !important;
 			}
+
 			a {
 				color: #ddd !important;
+
 				&:hover {
 					color: #fff !important;
 				}
 			}
+
 			i {
 				font-size: 30px !important;
 				color: #003366 !important;
@@ -501,22 +500,31 @@ footer {
 }
 
 .offcanvas-body {
+	.btn-close:focus {
+		box-shadow: none !important;
+	}
+
+	img {
+		max-width: 100px;
+	}
+
 	li a {
 		padding: 8px 16px;
 		margin-bottom: 10px;
 		border-left: 2px solid transparent;
 		transition: 300ms ease-in;
+		color: #666 !important;
 
 		&:hover:not(.active) {
 			padding: 8px 20px;
 			border-left: 2px solid #ddd;
-			color: green !important;
+			color: #0f2962 !important;
 		}
 
 		&.active {
 			padding: 8px 20px;
 			border-left: 2px solid #ddd;
-			color: red !important;
+			color: #0c336a !important;
 		}
 	}
 }
@@ -526,14 +534,17 @@ footer {
 		.border {
 			border-color: #003366 !important;
 		}
+
 		.form-check-input {
 			&:focus {
 				box-shadow: none !important;
 				border-color: #003366 !important;
 			}
+
 			&:hover {
 				border-color: #003366 !important;
 			}
+
 			&:checked {
 				border-color: #003366 !important;
 				background-color: #003366 !important;
