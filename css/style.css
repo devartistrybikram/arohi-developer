@@ -143,6 +143,24 @@ header {
 			color: #0c336a !important;
 		}
 	}
+
+	.topbar {
+		a {
+			color: #666 !important;
+			transition: 300ms ease-in;
+			i {
+				color: #666 !important;
+				transition: 300ms ease-in;
+			}
+			&:hover {
+				color: #0c336a !important;
+				i {
+					color: #0c336a !important;
+				}
+			}
+
+		}
+	}
 }
 
 #bannerArea {
@@ -271,7 +289,7 @@ header {
 
 				i {
 					font-size: 16px !important;
-					color: #003366 !important;
+					color: #48aa48 !important;
 				}
 
 				&::after {
@@ -299,7 +317,7 @@ header {
 					}
 
 					&::after {
-						background-color: #003366;
+						background-color: #48aa48;
 					}
 				}
 			}
@@ -309,7 +327,7 @@ header {
 
 #priceArea {
 	/* background: transparent url('https://placehold.co/1920x420') no-repeat center center / cover; */
-	background-color: #0c336a;
+	background-color: #11225a;
 
 	&::after {
 		content: '';
@@ -317,7 +335,7 @@ header {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		background-color: #0c336a;
+		background-color: #11225a;
 		/* background-color: rgb(0, 51, 102, 1); */
 		z-index: 1;
 	}
@@ -356,10 +374,6 @@ header {
 
 		&:hover {
 			transform: translateY(-5px);
-			-webkit-transform: translateY(-5px);
-			-moz-transform: translateY(-5px);
-			-ms-transform: translateY(-5px);
-			-o-transform: translateY(-5px);
 
 			.button-hover {
 				display: block;
@@ -391,25 +405,41 @@ header {
 #galleryArea {
 	img {
 		border-radius: 5px;
+		height: 300px;
+		object-fit: cover;
 	}
 }
 
 #contactArea {
-	img {
-		min-height: 420px;
+	iframe {
+		width: 100%;
+		min-height: 450px;
+		border-radius: 10px;
 	}
 }
 
 footer {
+	background-color: #003366;
 	.contactBox {
+		.innerBox {
+			background-color: #11225a !important;
+		}
 		span {
 			width: 85px;
 			height: 85px;
 			place-items: center;
-
+			&.d-block {
+				background-color: #fff !important;
+			}
+			a {
+				color: #ddd !important;
+				&:hover {
+					color: #fff !important;
+				}
+			}
 			i {
 				font-size: 30px !important;
-				color: #fff !important;
+				color: #003366 !important;
 			}
 		}
 	}
@@ -420,7 +450,7 @@ footer {
 			transition: 300ms ease-in;
 
 			&:hover:not(.active) {
-				color: red !important;
+				color: #f0f0f0 !important;
 			}
 
 			&.active {
@@ -447,7 +477,7 @@ footer {
 		a {
 			width: 45px;
 			height: 45px;
-			border: 2px solid red;
+			border: 2px solid #ddd;
 			place-items: center;
 			display: grid;
 			border-radius: 50%;
@@ -455,15 +485,15 @@ footer {
 
 			i {
 				font-size: 25px;
-				color: red !important;
+				color: #ddd !important;
 			}
 
 			&:hover {
 				scale: 1.15;
-				background-color: red;
+				background-color: #ddd;
 
 				i {
-					color: #fff !important;
+					color: #0c336a !important;
 				}
 			}
 		}
@@ -487,6 +517,27 @@ footer {
 			padding: 8px 20px;
 			border-left: 2px solid #ddd;
 			color: red !important;
+		}
+	}
+}
+
+.modal {
+	.modal-body {
+		.border {
+			border-color: #003366 !important;
+		}
+		.form-check-input {
+			&:focus {
+				box-shadow: none !important;
+				border-color: #003366 !important;
+			}
+			&:hover {
+				border-color: #003366 !important;
+			}
+			&:checked {
+				border-color: #003366 !important;
+				background-color: #003366 !important;
+			}
 		}
 	}
 }
