@@ -211,6 +211,7 @@
 	#bannerArea {
 		.item {
 			height: calc(100dvh - 155px);
+			max-height: 1024px !important;
 		}
 
 		.text {
@@ -221,6 +222,7 @@
 	#calltoactionArea {
 		.container {
 			min-height: calc(100dvh - 155px) !important;
+			max-height: 1024px !important;
 		}
 	}
 
