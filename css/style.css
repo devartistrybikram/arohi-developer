@@ -40,11 +40,6 @@
 	/* border: 1px saddlebrown solid !important; */
 }
 
-body,
-html {
-	overflow-x: hidden;
-}
-
 #mainContainer {
 	max-width: 1920px;
 	margin: 0 auto;
@@ -67,6 +62,13 @@ select {
 	&:focus {
 		border-color: #0f2962 !important;
 	}
+}
+
+img,
+video,
+svg {
+	max-width: 100%;
+	object-fit: cover;
 }
 
 .btn.btn-primary {
@@ -120,7 +122,7 @@ select {
 
 .sub-title {
 	color: #48aa48 !important;
-	font: normal 40px/56px MontserratMedium, 'Sans-serif' !important;
+	font: normal 40px/56px MontserratRegular, 'Sans-serif' !important;
 }
 
 header {
@@ -271,55 +273,59 @@ header {
 
 #amenitiesArea {
 	.boxData {
-		columns: 3;
+		ul {
+			columns: 3;
+			padding: 0 !important;
 
-		li {
-			min-height: 80px;
-			break-inside: avoid-column;
-			margin-bottom: 16px;
-			display: flex;
-			align-items: center;
-			gap: 12px;
-			padding: 16px;
-			line-height: 18px;
-			box-shadow: 0 10px 10px 0 rgba(180, 170, 150, .2);
-			transition: all 200ms ease-in;
-
-			.boxCircle {
-				display: block;
+			li {
+				min-height: 65px;
+				break-inside: avoid-column;
+				margin-bottom: 16px;
+				display: flex;
+				align-items: center;
+				gap: 12px;
+				padding: 16px;
+				line-height: 18px;
+				box-shadow: 0 10px 10px 0 rgba(180, 170, 150, .2);
 				transition: all 200ms ease-in;
 
-				i {
-					font-size: 16px !important;
-					color: #48aa48 !important;
-				}
-
-				&::after {
-					content: '';
-					position: absolute;
-					inset: 50% auto auto 50%;
-					transform: translate(-50%, -50%);
-					width: 40px;
-					height: 40px;
-					border-radius: 50%;
-					z-index: -1;
-					background-color: transparent;
-					transition: 300ms ease-in;
-				}
-			}
-
-			&:hover {
-				gap: 20px;
-				box-shadow: 0 10px 10px -3px rgba(180, 170, 150, .35);
-
 				.boxCircle {
+					display: block;
+					transition: all 200ms ease-in;
+
 					i {
-						color: #fff !important;
-						font-size: 18px !important;
+						font-size: 16px !important;
+						color: #48aa48 !important;
+						padding: 0 !important;
+						margin: 0 !important;
 					}
 
 					&::after {
-						background-color: #48aa48;
+						content: '';
+						position: absolute;
+						inset: 50% auto auto 50%;
+						transform: translate(-50%, -50%);
+						width: 40px;
+						height: 40px;
+						border-radius: 50%;
+						z-index: -1;
+						background-color: transparent;
+						transition: 300ms ease-in;
+					}
+				}
+
+				&:hover {
+					gap: 20px;
+					box-shadow: 0 10px 10px -3px rgba(180, 170, 150, .35);
+
+					.boxCircle {
+						i {
+							color: #fff !important;
+						}
+
+						&::after {
+							background-color: #48aa48;
+						}
 					}
 				}
 			}
@@ -330,17 +336,6 @@ header {
 #priceArea {
 	/* background: transparent url('https://placehold.co/1920x420') no-repeat center center / cover; */
 	background-color: #11225a;
-
-	&::after {
-		content: '';
-		inset: 0;
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background-color: #11225a;
-		/* background-color: rgb(0, 51, 102, 1); */
-		z-index: 1;
-	}
 
 	.priceCard {
 		overflow: hidden;
@@ -531,6 +526,7 @@ footer {
 		}
 
 		&.active {
+			font-weight: bold !important;
 			padding: 8px 20px;
 			border-left: 2px solid #0c336a;
 			color: #0c336a !important;
@@ -562,6 +558,30 @@ footer {
 	}
 }
 
+.scrollToTop {
+	content: " ";
+	width: 50px;
+	height: 50px;
+	background: #003366 !important;
+	position: fixed;
+	inset: auto 20px 20px auto;
+	display: none;
+	z-index: 99999;
+	place-items: center;
+	transition: 300ms ease-in;
+	box-shadow: 0 0 10px -5px rgba(255, 255, 255, 0.25);
 
-/* * {border: 1px solid red !important;}
-.container { border: 1px solid red !important;} */
+	svg {
+		fill: #fff !important;
+		transition: 300ms ease-in;
+	}
+
+	&:hover {
+		background: #fff !important;
+		border: 2px solid #003366 !important;
+
+		svg {
+			fill: #003366 !important;
+		}
+	}
+}
