@@ -57,8 +57,8 @@
 	footer {
 		.contactBox {
 			span {
-				min-width: 50px;
-				min-height: 50px;
+				min-width: 35px;
+				min-height: 35px;
 				place-items: center;
 
 				i {
@@ -194,8 +194,8 @@
 
 		.contactBox {
 			span {
-				min-width: 75px;
-				min-height: 75px;
+				min-width: 65px;
+				min-height: 65px;
 				place-items: center;
 
 				i {
@@ -223,6 +223,21 @@
 			min-height: calc(100dvh - 155px) !important;
 		}
 	}
+
+	footer {
+		.contactBox {
+			span {
+				min-width: 75px;
+				min-height: 75px;
+				place-items: center;
+
+				i {
+					font-size: 25px !important;
+				}
+			}
+		}
+	}
+
 }
 
 /* Extra large devices (large desktops, 1400px and up) */
