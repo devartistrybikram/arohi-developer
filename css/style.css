@@ -41,7 +41,7 @@
 }
 
 body,
-.hideOverflowOnMobile {
+html {
 	overflow-x: hidden;
 }
 
