@@ -1,4 +1,7 @@
 $(document).ready(function() {
+
+    $('[data-aos]').parent().addClass('hideOverflowOnMobile');
+
     $('.owl-banner').owlCarousel({
         items: 1,
         loop: true,
@@ -7,7 +10,7 @@ $(document).ready(function() {
         dots: false,
         autoplay: true,
         autoplayTimeout: 2000,
-        center: true
+        // center: true
     });
     $('.owl-gallery').owlCarousel({
         items: 4,
