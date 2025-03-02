@@ -424,8 +424,8 @@ footer {
 		}
 
 		span {
-			width: 85px;
-			height: 85px;
+			min-width: 75px;
+			min-height: 75px;
 			place-items: center;
 
 			&.d-block {
