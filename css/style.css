@@ -40,6 +40,10 @@
 	/* border: 1px saddlebrown solid !important; */
 }
 
+body {
+	overflow-x: hidden;
+}
+
 #mainContainer {
 	max-width: 1920px;
 	margin: 0 auto;
@@ -49,7 +53,7 @@
 section {
 	scroll-snap-align: start;
 	scroll-padding-top: 250px;
-	scroll-margin-top: 156.5px;
+	scroll-margin-top: 155px;
 }
 
 input,
@@ -126,6 +130,8 @@ svg {
 }
 
 header {
+	background-color: #11225a !important;
+
 	.navbar-brand img {
 		max-width: 100px;
 	}
@@ -413,6 +419,7 @@ header {
 		background-color: #003366;
 		background: linear-gradient(180, rgba(25, 0, 60, 1) 0%, rgba(5, 81, 133, 1) 100%);
 		position: relative;
+
 		&::after {
 			content: " ";
 			position: absolute;
@@ -423,6 +430,7 @@ header {
 			transform: scaleX(-1);
 			background: url('../images/quote.png') no-repeat 300px 150px / 100px !important;
 		}
+
 		&::before {
 			content: " ";
 			position: absolute;
@@ -432,18 +440,22 @@ header {
 			opacity: .5;
 			transform: scaleY(-1);
 			background: url('../images/quote.png') no-repeat 300px 0 / 100px !important;
-}
+		}
+
 		img {
 			max-width: 120px;
 			border-radius: 50%;
 			aspect-ratio: 1/1;
 		}
+
 		i {
 			color: #ddd !important;
+
 			&.active {
 				color: gold !important;
 			}
 		}
+
 		&:hover {
 			box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25) !important;
 		}
@@ -452,14 +464,17 @@ header {
 
 #storyArea {
 	background: #fff url('../images/construction.jpg') no-repeat center center / cover;
+
 	.card {
 		h3 {
 			color: #003366 !important;
 			font-family: MontserratMedium, 'Sans-serif';
 			text-transform: capitalize;
 		}
+
 		a {
 			transition: 300ms ease;
+
 			&:hover {
 				color: #003366 !important;
 			}
