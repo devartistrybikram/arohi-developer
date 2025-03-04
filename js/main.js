@@ -2,7 +2,7 @@ AOS.init({
 	offset: 200,
 	delay: 100,
 	duration: 650,
-	easing: 'ease',
+	easing: 'ease-out-back',
 	once: false,
 	mirror: false,
 	anchorPlacement: 'top-bottom'
@@ -20,7 +20,7 @@ $(document).ready(function () {
 	});
 
 	$(".scrollToTop").click(function () {
-		$("html, body").animate({ scrollTop: 0 }, 800);
+		$("html, body").animate({ scrollTop: 0 }, 1200);
 		return false;
 	});
 });
